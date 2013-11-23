@@ -1,0 +1,398 @@
+<!DOCTYPE HTML>
+<!-- <html lang="en-US"> -->
+<html lang="en-US" class="fade nonumbers">
+<!-- 
+  ^ a class of "fade" makes slides fade smoothly into one another
+ -->
+<!-- <html lang="en-US" class="nonumbers"> -->
+<!-- 
+  If you want no numbers on the slides add a "nonumbers" class 
+  to the HTML element.
+  Adding a class of "fade" will make slides fade into another. 
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>Connecting and Debugging Firefox OS</title>
+<!-- 
+  If you upload your slides to the web, ensure that you have 
+  a good title - this shows up in search results and social
+  media links
+ -->
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+  <link rel="stylesheet" href="themes/mozilla/styles/partners.css">
+
+  <style type="text/css">
+    div[id$='bullets'].slide > div::after {
+      content: 'For Information only, do NOT present';
+      background: rgba(200,0,0,0.5);
+      color: #fff;
+      position: absolute;
+      top: 20px;
+      right: 0;
+      padding: 5px 20px;
+      transform: rotate(90deg) translate(52%,-150px);
+      border-radius: 5px;
+    }
+    .full div[id$='bullets'].slide > div::after {
+      animation: wiggle alternate 1s infinite;
+    }
+    @keyframes wiggle {
+      from {
+        transform: rotate(90deg) translate(52%,-150px);
+      }
+      to {
+        transform: rotate(90deg) translate(52%,-160px);
+      }
+    }
+  </style>
+</head>
+<body class="list">
+
+  <header class="caption">
+    <h1>Firefox OS Workshop Budapest</h1>
+    <p class="footer">
+      Jason Weathersby, Technical Evangelist, Mozilla 
+      <a href="https://twitter.com/JasonWeathersby">@JasonWeathersby</a> or 
+      <a href="mailto:jweathersby@mozilla.com">jweathersby@mozilla.com</a>
+    </p>
+  </header>
+  <aside class="talkdescription">
+    <p>This slide deck is using the shower system - roll over the previews to see the notes and click any slide to go into presentation mode. Then use keys to navigate. <button onclick="goFullScreen()">Go fullscreen</button></p>
+    <p class="abstract">
+      <strong>Abstract: </strong>
+       This talk discusses setup for Firefox OS Simulator
+    </p>
+  </aside>
+<!-- 
+    Simply copy the whole block for each slide you want.
+  Special slides get extra classes. Each slide needs an ID 
+  to allow for bookmarking and target jumping.
+-->
+
+  <div id="cover" class="slide"><div>
+    <section>
+      <header>
+        <h2>Firefox OS Workshop Budapest - Nov 2013</h2>
+      </header>
+      <!--<img src="pictures/fxos/ffxostitle.png" 
+           class="middle shadow" height="400"
+           alt="High-five at the Mozilla Festival!">-->
+        <div class="middle">
+          <div id="foxtail-phone" > 
+            <div id="foxtail-overlay">                
+            <div id="foxtail"></div>
+            </div> 
+          </div>
+      </div>
+      <br>
+      <small class="byline">
+        Jason, Weathersby, Budapest, Hungary, November 23, 2013
+      </small>
+      <footer class="notes">
+        This is a simple cover slide with an image in the middle
+      </footer>
+    </section>
+  </div></div>
+
+<!-- end slide block -->
+
+<!-- ===================================================================
+Firefox OS 
+======================================================================== -->
+ 
+   <div id="myagenda" class="slide"><div>
+    <section>
+      <header>
+        <h2>Agenda</h2>
+      </header>
+      <ul class="inner">
+        <li class="active">Setup Connection for your Phone</li>
+        <li>Setup Either 1.1 or 1.2 Simulator</li>
+        <li>Demo Simulators</li>
+      </ul>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+<div id="remotedebug" class="slide"><div>
+    <section>
+      <header>
+        <h2>Enable Remote Debugging</h2>
+      </header>
+      Device information -> More information -> Developer 
+            <img src="pictures/connect/remote-debugging.png" 
+           alt="remote debugging setting" 
+           class="right shadow" height="350">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>  
+     <div id="windows" class="slide"><div>
+    <section>
+      <header>
+        <h2>Setting up Windows</h2>
+      </header>
+      		http://downloads.geeksphone.com/drivers/usb_driver.zip
+      		<br> <img src="pictures/fxos/coke2.jpg" 
+           alt="get usb driver" 
+           class="right shadow" height="350">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div> 
+  
+    <div id="windows1" class="slide"><div>
+    <section>
+      <header>
+        <h2>Setting up Windows - 1</h2>
+      </header>
+            <img src="pictures/connect/devicemanagerbefore.png" 
+           alt="device manager before" 
+           class="middle shadow" height="450">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+     <div id="windows2" class="slide"><div>
+    <section>
+      <header>
+        <h2>Setting up Windows - 2</h2>
+      </header>
+            <img src="pictures/connect/updatedriver1.png" 
+           alt="update driver 1" 
+           class="middle shadow" height="300">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div> 
+
+     <div id="windows3" class="slide"><div>
+    <section>
+      <header>
+        <h2>Setting up Windows - 3</h2>
+      </header>
+            <img src="pictures/connect/updatedriver2.png" 
+           alt="update driver 2" 
+           class="middle shadow" height="450">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>   
+  
+  
+     <div id="windows4" class="slide"><div>
+    <section>
+      <header>
+        <h2>Setting up Windows - 4</h2>
+      </header>
+            <img src="pictures/connect/updatedriver3.png" 
+           alt="udpate drvier 3" 
+           class="middle shadow" height="450">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>   
+  
+     <div id="windows5" class="slide"><div>
+    <section>
+      <header>
+        <h2>Setting up Windows - 5</h2>
+      </header>
+            <img src="pictures/connect/updatedriver4.png" 
+           alt="update driver 4" 
+           class="middle shadow" height="300">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div> 
+
+     <div id="windows6" class="slide"><div>
+    <section>
+      <header>
+        <h2>Setting up Windows - 6</h2>
+      </header>
+            <img src="pictures/connect/devicemanager.png" 
+           alt="device manager after" 
+           class="middle shadow" height="450">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div> 
+ 
+      <div id="windows7" class="slide"><div>
+    <section>
+      <header>
+        <h2>Setting up Windows - Windows 8</h2>
+      </header>
+      http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html
+           <br> <img src="pictures/connect/disable_driver.gif" 
+           alt="windows 8 driver installation" 
+           class="right shadow" height="350">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>  
+  
+     <div id="linux" class="slide"><div>
+    <section>
+      <header>
+        <h2>Setting up on Linux</h2>
+      </header>
+      		<p>Keon Device - 05c6 idVendor<br>
+      		sudo service udev restart<br>
+      		</p>
+            <img src="pictures/connect/linux1.png" 
+           alt="linux setup" 
+           class="shadow" height="280">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div> 
+       <div id="Mac" class="slide"><div>
+    <section>
+      <header>
+        <h2>Setting up on Mac</h2>
+      </header>
+            <img src="pictures/connect/cone.jpg" 
+           alt="mac setup" 
+           class="middle shadow" height="280">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div> 
+  
+  
+  <div id="sim" class="slide"><div>
+    <section>
+      <header>
+        <h2>Setting Up the Simulator</h2>
+      </header>
+      <ul class="inner">
+        <li class="active">Firefox 25 - Firefox OS 1.1 - Simulator 4.0</li>
+        <li> or </li>
+        <li>Firefox 26 - Firefox OS 1.2 or Greater - Simulator 1.2 </li>
+      </ul>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+<div id="updategp" class="slide"><div>
+    <section>
+      <header>
+        <h2>Updating the Geeksphone</h2>
+      </header>
+      http://downloads.geeksphone.com/
+            <img src="pictures/connect/gpdownload.png" 
+           alt="Geeksphone Download Page" 
+           class="" height="425">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div> 
+
+<div id="1.1setup" class="slide"><div>
+    <section>
+      <header>
+        <h2>Setup for Firefox OS 1.1</h2>
+      </header>
+      https://addons.mozilla.org/en-US/firefox/addon/firefox-os-simulator/
+            <img src="pictures/connect/1.1sim.png" 
+           alt="1.1 simulator" 
+           class="" height="425">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div> 
+  </div></div>
+
+  
+<div id="1.2setup" class="slide"><div>
+    <section>
+      <header>
+        <h2>Setup for Firefox OS 1.2</h2>
+      </header>
+      https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/
+      https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager
+            <img src="pictures/connect/1.2setup.png" 
+           alt="1.2 simulator" 
+           class="" height="425">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div> 
+  </div></div>
+  
+  <div id="1.2setupplugs" class="slide"><div>
+    <section>
+      <header>
+        <h2>Enable/Disable Addons</h2>
+      </header>
+            <img src="pictures/connect/plugins.png" 
+           alt="add-ons" 
+           class="" height="500">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div> 
+  </div></div>
+  <div id="simdashboard" class="slide h"><div>
+    <section>
+      <header>
+        <h2>Demo of Firefox OS Simulator</h2>
+      </header>
+      <img src="pictures/connect/simulatordb.png" 
+           alt="Simulator" 
+           class="middle" height="500">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="appmanager" class="slide h"><div>
+    <section>
+      <header>
+        <h2>Demo of Firefox OS App Manager</h2>
+      </header>
+      <img src="pictures/fxos/AppManager.jpg" 
+           alt="App Manager" 
+           class="middle shadow" height="400">
+      <p class="demourl">
+        <a href="https://hacks.mozilla.org/2013/10/introducing-the-firefox-os-app-manager"/>
+         App Manager will be here soon!
+        </a>
+      </p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+<div id="thanks" class="slide"><div>
+    <section>
+      <header>
+        <h2>Thanks</h2>
+      </header>
+      <img src="pictures/mozillaoverview/newhistory.jpg" height="300" class="right" alt="Go out and make new history">
+      <ul class="nobull">
+        <li>Jason Weathersby</li>
+        <li>Technical Evangelist</li>
+        <li><a href="http://twitter.com/JasonWeathersby">@JasonWeathersby</a></li>
+      </ul>
+
+
+    <footer class="notes">
+    </footer>
+
+    </section>
+  </div></div>
+
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+  <div class="progress-off"><div></div></div>
+  <script src="scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>
